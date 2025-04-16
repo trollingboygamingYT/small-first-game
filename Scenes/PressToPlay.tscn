@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://62k6ydrngygv"]
+
+[ext_resource type="Script" uid="uid://76ylvc5etcd7" path="res://Scripts/SwitchToScene.gd" id="1_sau13"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sau13")
+
+[node name="MainMenuPanel" type="Panel" parent="."]
+offset_right = 1151.0
+offset_bottom = 646.0
+
+[node name="PlayButton" type="Button" parent="MainMenuPanel"]
+layout_mode = 2
+offset_left = 327.0
+offset_top = 168.0
+offset_right = 762.0
+offset_bottom = 238.0
+text = "Press To Play!"
+
+[connection signal="pressed" from="MainMenuPanel/PlayButton" to="." method="_on_play_button_pressed"]
